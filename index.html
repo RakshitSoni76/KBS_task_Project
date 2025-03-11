@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="calcBackEnd.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Layout</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+    }
+    table {
+        border-collapse: collapse;
+        width: 220px;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    caption {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    td {
+        padding: 0;
+        text-align: center;
+    }
+
+    button {
+        width: 100%;
+        height: 50px;
+        border: 1px solid black;
+        background-color: white;
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: lightgray;
+    }
+    .oper-btn {
+        background-color: yellow;
+        font-weight: 200;
+    }
+    .oper-btn:hover {
+        background-color: rgb(204, 204, 18);
+    }
+    .equal-btn {
+        background-color: lightblue;
+        font-weight: bold;
+        border-bottom-right-radius: 10px;
+    }
+
+    .equal-btn:hover {
+        background-color: dodgerblue;
+        color: white;
+    }
+
+    input {
+        width: 100%;
+        /* Fill the entire row */
+        height: 50px;
+        font-size: 1.5em;
+        text-align: right;
+        border: 1px solid black;
+        outline: none;
+        padding: 10px;
+        box-sizing: border-box;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: #f0f0f0;
+    }
+
+    .zero {
+        border-bottom-left-radius: 10px;
+    }
+
+    input::placeholder {
+        font-size: 0.75em;
+        color: rgb(0, 0, 0);
+    }
+</style>
+
+<body>
+    <table>
+        <thead>
+            <caption>Online Calculator</caption>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="4"><input type="text" id="display" readonly placeholder="Enter your calculation"></td>
+            </tr>
+            <tr>
+                <td><button class="oper-btn" value="clear">CE</button></td>
+                <td><button class="oper-btn" value="delete">Del</button></td>
+                <td><button class="oper-btn" value="%">%</button></td>
+                <td><button class="oper-btn" value="÷">÷</button></td>
+            </tr>
+            <tr>
+                <td><button value="7">7</button></td>
+                <td><button value="8">8</button></td>
+                <td><button value="9">9</button></td>
+                <td><button class="oper-btn" value="x">x</button></td>
+            </tr>
+            <tr>
+                <td><button value="4">4</button></td>
+                <td><button value="5">5</button></td>
+                <td><button value="6">6</button></td>
+                <td><button class="oper-btn" value="-">-</button></td>
+            </tr>
+            <tr>
+                <td><button value="1">1</button></td>
+                <td><button value="2">2</button></td>
+                <td><button value="3">3</button></td>
+                <td><button class="oper-btn" value="+">+</button></td>
+            </tr>
+            <tr>
+                <td><button class="zero" value="0">0</button></td>
+                <td><button value=".">.</button></td>
+                <td colspan="2">
+                    <button class="equal-btn" value="=">=</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
